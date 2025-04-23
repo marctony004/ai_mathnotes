@@ -18,9 +18,17 @@ class TextClassifier {
   }
 
   static bool _isMathProblem(String line) {
-    if (line.contains('=') && line.contains(RegExp(r'[a-zA-Z]'))) {
-  return true; // likely a solvable equation
+  final mathSymbols = ['+', '-', '*', '/', '=', '^'];
+  final hasVariable = RegExp(r'[a-zA-Z]').hasMatch(line);
+  final hasEquation = line.contains('=');
+  final containsSymbols = mathSymbols.any((symbol) => line.contains(symbol));
+
+  final equationPattern = RegExp(r'^[\d\s\w\^\*\+\-/=().-]+$');
+  final basicMath = containsSymbols && hasVariable;
+
+  return hasEquation && hasVariable || basicMath || equationPattern.hasMatch(line);
 }
+
 
 
 
