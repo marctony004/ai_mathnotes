@@ -1,20 +1,19 @@
-<<<<<<< HEAD
-# ai_mathnotes
+# AI MathNotes 🧠📝
 
-A new Flutter project.
+AI-powered handwritten math note-taking app. Write math problems using a stylus and receive instant AI solutions using OCR + SymPy.
+
+## Features
+
+- ✍️ Handwriting capture using Flutter canvas
+- 🔍 OCR with Google ML Kit (or custom OCR)
+- 🧠 Solve math problems with SymPy backend (FastAPI)
+- 📸 Solve-on-write interaction mode
+- 📤 Save results, export to gallery
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# ai-mathnotes
->>>>>>> 8ed7ab5d5a03e5a79d27b29675957f820cd28df3
+```bash
+git clone https://github.com/YOUR_USERNAME/ai_mathnotes.git
+cd ai_mathnotes
+flutter pub get
+flutter run
